@@ -1,6 +1,7 @@
 import React from 'react'
+import { useAxios } from '../../CustomHook/useAxios'
 import styles from './Home.module.css'
-import { useAxios } from '../../CostumeHook/useAxios'
+
 const Home = () => {
 const {data,isLoading,isError}=useAxios("http://localhost:1234/data")
 console.log(data)
