@@ -1,22 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import axios from "axios"
+import React from 'react'
 import styles from './Home.module.css'
+import { useAxios } from '../../CostumeHook/useAxios'
 const Home = () => {
-const [data,setData]=useState([])
- useEffect(()=>
- {
-     let req={
-         method:"get",
-         url:"http://localhost:1234/data"
-     }
-     axios(req).then((res)=>{
-        // console.table(res)
-        setData(res.data)
-     }).catch((e)=>
-     {
-         console.log(e)
-     })
- },[]) 
+const {data,isLoading,isError}=useAxios("http://localhost:1234/data")
+console.log(data)
   return (
     <div className={styles.background}>
         <h1 className={styles.h1}>Movies</h1>
