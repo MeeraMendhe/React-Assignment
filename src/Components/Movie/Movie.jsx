@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useAxios } from '../../CustomHook/useAxios'
 import Navbar from '../Navbar/Navbar'
 import styles from "./Movie.module.css"
 import SlideShow from './SlideShow/SlideShow'
 import ReactLoading from "react-loading";
+import List from '../List/List'
 const Movie = () => {
    // console.log("Movie")
-    const {data,isLoading,isError}=useAxios("http://localhost:1234/data")
+   const[page,setPage]=useState(1)
+   const limit=6
+    const {data,isLoading,isError}=useAxios( `http://localhost:1234/data?_page=${page}&_limit=${limit}`)
     
   return (
     <div className={styles.background}>
@@ -29,15 +32,20 @@ const Movie = () => {
                 <h1 className={styles.h1}>Something went wrong</h1>
             </div>
         ):(
-        <div className={styles.grid}>
+            <div>
+                        <div className={styles.grid}>
             {
-                data.map(e=>
-                    ( <div >
-                         <img className={styles.image} src={e.posterURL} alt="img"/>
-                     </div>)
-                     )
+                data?data.map((e)=>{
+                    return   <List key={e._id}{...e}/>
+                }):""
             }
-        </div>
+               </div>
+                <div>
+                <button disabled={page==1} onClick={()=>setPage(page-1)}>Previous</button>
+                <h1>{page}</h1>
+               <button onClick={()=>setPage(page+1)}>Next</button>
+                </div>
+            </div>
         )
       }
       </div>

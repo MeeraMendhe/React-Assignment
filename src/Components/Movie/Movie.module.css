@@ -1,10 +1,12 @@
 .background
 {
-    background-image: url("https://media.istockphoto.com/photos/movie-projector-on-dark-background-picture-id1007557230?k=20&m=1007557230&s=612x612&w=0&h=hWEw8rA6ASt-Z18pNvUKk2GtQZVLj1GHv3HFlNB4p6U=");
+    /* background-image: url("https://media.istockphoto.com/photos/movie-projector-on-dark-background-picture-id1007557230?k=20&m=1007557230&s=612x612&w=0&h=hWEw8rA6ASt-Z18pNvUKk2GtQZVLj1GHv3HFlNB4p6U=");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color:black;
     width: 100vw;
-    height: 200vh;
+    height: auto;
+   padding-bottom: 100px;
 }
 .h1
 {
@@ -34,13 +36,4 @@
 .center {
     margin-left: 45%;
   }
-  .image
-  {
-      border-radius: 20px;
-      box-shadow: rgba(243, 237, 237, 0.815) 0px 3px 8px;
-  }
-  .image:hover
-  {
-      transform:translateX(20px);
-      box-shadow: rgba(67, 7, 230, 0.815) 0px 3px 8px;
-  }
+ 
