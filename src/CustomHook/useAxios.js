@@ -5,7 +5,6 @@ export const useAxios = (url) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
-  const limit=6
   useEffect(() => {
     setIsLoading(true);
     let req={
