@@ -12,3 +12,11 @@
     font-size: 80px;
     padding-top: 20%;
 }
+.btn
+{
+    height: 60px;
+    width:150px;
+    border-radius: 20px;
+    margin-top: 16px;
+    font-size: 15px;
+}

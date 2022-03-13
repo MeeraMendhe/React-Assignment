@@ -1,0 +1,2 @@
+export const ADD_TO_WISH="ADD_TO_WISH"
+export const DELETE_FROM_WISH="DELETE_FROM_WISH"

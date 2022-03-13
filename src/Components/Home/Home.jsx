@@ -14,7 +14,7 @@ const handleClick=()=>
   return (
     <div className={styles.background}>
         <h1 className={styles.h1}>Movies</h1>
-        <button onClick={()=>handleClick()}>Start App</button>
+        <button className={styles.btn} onClick={()=>handleClick()}>Start App</button>
     </div>
   )
 }
