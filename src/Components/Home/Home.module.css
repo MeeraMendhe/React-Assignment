@@ -1,0 +1,14 @@
+.background{
+    background-image: url("https://nofilmschool.com/sites/default/files/styles/article_wide/public/lighting.jpg?itok=mfBaeRTA");
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.h1
+{
+    color:white;
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 80px;
+    padding-top: 20%;
+}
