@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
 }
 .h1
 {
@@ -18,5 +18,29 @@
     margin-left: 40%;
     margin-top: 50px;
     border-radius: 20px;
-    box-shadow: rgba(243, 237, 237, 0.815) 0px 3px 8px;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
+.div
+{
+    width:100%;
+    margin-top: 50px;
+}
+.grid
+{
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    gap:15px
+}
+.center {
+    margin-left: 45%;
+  }
+  .image
+  {
+      border-radius: 20px;
+      box-shadow: rgba(243, 237, 237, 0.815) 0px 3px 8px;
+  }
+  .image:hover
+  {
+      transform:translateX(20px);
+      box-shadow: rgba(67, 7, 230, 0.815) 0px 3px 8px;
+  }

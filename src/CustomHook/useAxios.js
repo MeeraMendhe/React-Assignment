@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios"
+import ReactLoading from "react-loading";
 export const useAxios = (url) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -13,8 +14,11 @@ export const useAxios = (url) => {
     }
     axios(req).then((res)=>{
        // console.table(res)
-       setData(res.data)
-       setIsLoading(false);
+     setTimeout(()=>
+     {
+      setData(res.data)
+      setIsLoading(false);
+     },3000)
     }).catch((e)=>
     {
         setIsError(true);
