@@ -14,7 +14,7 @@
 # **[Airmeet Assignment](https://airmeet.vercel.app/)**
 
  ##Techstack Use
- - Frontend
+ - Frontend- https://github.com/MeeraMendhe/Airmeet
     - React
     - Redux
     - Infinite Scrolling
