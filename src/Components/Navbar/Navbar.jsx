@@ -62,23 +62,23 @@ function myfunc(){
       <div className={styles.width}>
           <h1 className={styles.h1}>Best theater in your city</h1>
       </div>
-      <div>
+      <div className={styles.box}>
           <input className={styles.inp} placeholder="Search Movie" ref={query} onChange={()=>debouncer(myfunc,1000)} type="text" />
       </div>
       <div onClick={handleFavorite} className={styles.image1}> 
           <img src="https://i.pinimg.com/originals/97/8e/33/978e334ee492dda7a96b7dcee8b468f2.jpg" alt="favorite"/>
       </div>
       <Modal className={styles.Modal} isOpen={show}>
-      <button className={styles.btn} onClick={()=>setShow(false)}>Close</button>
+      <button className={styles.x} onClick={()=>setShow(false)}>X</button>
           {
               search?search.map(e=>(
-                  <h1>{e.title}</h1>
+                  <p className={styles.p}>{e.title}</p>
               )):""
              
           }
           
       </Modal>
-      <div>
+      <div className={styles.btnBox}>
           <button className={styles.btn}>Login</button>
       </div>
     </div>
