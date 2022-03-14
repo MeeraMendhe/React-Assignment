@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Airmeet Backend Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Problem Statement
 
-## Available Scripts
+ - Use a mock API to show a list of any data (comic characters etc), List should load minimum 1000 data items.
+ - Show loading while waiting for API results and add error handling of API failures.
+ - Each list should have a checkbox to select that item
+ - Selected item should be highlighted
+ - We should be able to deselect the item also
+ - Provide following actions to be done on selected items
+      - Delete
+      - Favorite (store in local storage)
 
-In the project directory, you can run:
+# **[Airmeet Assignment](https://airmeet.vercel.app/)**
 
-### `npm start`
+ ##Techstack Use
+ - Frontend
+    - React
+    - Redux
+    - Infinite Scrolling
+    - Debouncing
+    - CustomHook
+    - React-router-dom
+    - Model
+    - React-slideshow-image
+    - Deploy(vercel)
+ - Backend
+    - Express
+    - MongoDb
+    - Mongoose  
+    - Cors
+    - Mongo Atlas
+    - MVC model
+    - Deploy(heroku)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## API Reference
 
-### `npm run build`
+#### Post Data
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```http
+  GET /data
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `_id` | `string` | **Required**. Your API key |
+| `title` | `string` | **Required**. Movie Title |
+| `type` | `string` | **Default**. type of Movie |
+| `posterURL` | `string` | **Required**. Image of Movie |
+| `imdbId` | `string` | **Required**. Movie imdbId |
+| `flag` | `Boolean` | **Required**. Default = false |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```http
+  GET /data/filter/:type
+```
+ 
+ ```http
+   PATCH /data/:id
+```
 
-### `npm run eject`
+```http
+  POST /data/:id
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Screenshots
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![App Screenshot](https://i.ibb.co/XFTtJvn/Screenshot-2022-03-14-at-5-37-28-PM.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![App Screenshot](https://i.ibb.co/F0Xpxjs/Screenshot-2022-03-14-at-5-37-44-PM.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![App Screenshot](https://i.ibb.co/55Wz2F0/Screenshot-2022-03-14-at-5-37-59-PM.png)
 
-## Learn More
+![App Screenshot](https://i.ibb.co/SKSrNx6/Screenshot-2022-03-14-at-5-38-25-PM.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![App Screenshot](https://i.ibb.co/QXqTznh/Screenshot-2022-03-14-at-5-38-45-PM.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![App Screenshot](https://i.ibb.co/pyMwSS2/image.png)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
