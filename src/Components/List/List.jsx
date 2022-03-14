@@ -6,9 +6,7 @@ import styles from "./List.module.css"
 import {useAxios} from "../../CustomHook/useAxios"
 const List = ({...e}) => {
     let {type,title,posterURL,_id,flag}=e
-    let [id,setId]=useState(false)
     const [val,setVal]=useState("")
-    const { wish } = useSelector((state) => ({ wish: state.wish }));
     const toggle=()=>
     {
      
@@ -33,7 +31,20 @@ const List = ({...e}) => {
           localStorage.setItem("WishList", JSON.stringify([]));
         }
         let wishlistPro = JSON.parse(localStorage.getItem("WishList"));
-         wishlistPro.push(data);
+        let num=false
+        for(let i=0;i<wishlistPro.length;i++)
+        {
+            if(data.title==wishlistPro[i].title)
+            {
+                num=true
+                break;
+            }
+        }
+        if(num==false)
+        {
+            wishlistPro.push(data);
+        }
+
         localStorage.setItem("WishList", JSON.stringify(wishlistPro));
       }
       const handleChange=(el)=>{

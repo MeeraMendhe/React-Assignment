@@ -21,7 +21,7 @@ const Navbar = () => {
       </div>
       <div>
           <input className={styles.inp} placeholder="Search Movie" type="text" />
-          <span className={styles.span}>Search</span>
+          <button className={styles.bt1}>Search</button>
       </div>
       <div onClick={handleFavorite} className={styles.image1}> 
           <img src="https://i.pinimg.com/originals/97/8e/33/978e334ee492dda7a96b7dcee8b468f2.jpg" alt="favorite"/>
