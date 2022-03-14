@@ -1,7 +1,7 @@
 .image {
   border-radius: 20px;
   box-shadow: rgba(243, 237, 237, 0.815) 0px 3px 8px;
-  width: 80%;
+  width: 70%;
 }
 .image:hover {
   transform: translateX(20px);
