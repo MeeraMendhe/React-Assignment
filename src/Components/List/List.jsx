@@ -20,13 +20,7 @@ const List = ({...e}) => {
         let wishlistPro = JSON.parse(localStorage.getItem("WishList"));
          wishlistPro.push(data);
         localStorage.setItem("WishList", JSON.stringify(wishlistPro));
-      };
-     
-      const handleDelete = (data) => {
-        let cart = JSON.parse(localStorage.getItem("WishList"));
-        let newCart = cart.filter((e) => e._id !== data._id);
-        localStorage.setItem("WishList", JSON.stringify(newCart));
-      };
+      }
       
       const handleChange=(el)=>{
         // console.log(e.target.checked)

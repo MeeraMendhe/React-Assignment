@@ -1,0 +1,38 @@
+.background
+{
+    background-color:black;
+    width: 100vw;
+    height: auto;
+   padding-bottom: 100px;
+}
+.h1
+{
+    font-family: 'Sansita Swashed', cursive;
+    color:white;
+    margin-top: 50px;
+}
+.image
+{
+    border-radius: 20px;
+    box-shadow: rgba(243, 237, 237, 0.815) 0px 3px 8px;
+}
+.image:hover
+{
+    transform:translateX(20px);
+    box-shadow: rgba(67, 7, 230, 0.815) 0px 3px 8px;
+}
+.grid
+{
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    gap:15px;
+    margin-top: 50px;
+    margin-left: 78px;
+}
+.btn
+{
+    height: 60px;
+    width:150px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
