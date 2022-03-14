@@ -1,4 +1,4 @@
-# Airmeet Backend Assignment
+# Airmeet Assignment
 
 ## Problem Statement
 
@@ -24,7 +24,7 @@
     - Model
     - React-slideshow-image
     - Deploy(vercel)
- - Backend
+ - Backend- https://github.com/MeeraMendhe/Airmeet-Backend
     - Express
     - MongoDb
     - Mongoose  
