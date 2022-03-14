@@ -21,7 +21,7 @@ const MovieType = () => {
         }
       };
     const { data, isLoading, isError } = useAxios(
-        `http://localhost:1234/data/filter/${obj.type}?_page=${page}&_limit=${limit}`,
+        `https://airmeetbackend.herokuapp.com/data/filter/${obj.type}?_page=${page}&_limit=${limit}`,
       )
     
      // console.log(data,"type")

@@ -1,4 +1,4 @@
-import { ADD_TO_WISH } from "./actionType";
+import { ADD_TO_WISH, DELETE_FROM_WISH } from "./actionType";
 
 export const addWish=(payload)=>
 ({

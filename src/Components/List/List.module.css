@@ -8,3 +8,23 @@
     transform:translateX(20px);
     box-shadow: rgba(67, 7, 230, 0.815) 0px 3px 8px;
 }
+.btn
+{
+    height: 60px;
+    width:200px;
+    border-radius: 20px;
+    margin:15px;
+    font-size: 18px;
+    color:blue
+}
+.check{
+    height: 40px;
+    width:40px;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+.flex
+{
+    display: flex;
+    margin-left: 110px;
+}

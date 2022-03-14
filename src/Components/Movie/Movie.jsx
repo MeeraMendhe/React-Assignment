@@ -11,7 +11,7 @@ const Movie = () => {
   const [query,setQuery]=useState("")
   const limit = 6
   const { data, isLoading, isError } = useAxios(
-    `http://localhost:1234/data?_page=${page}&_limit=${limit}`,
+    `https://airmeetbackend.herokuapp.com/data?_page=${page}&_limit=${limit}`
   )
   const navigate=useNavigate()
   const handleQuery=(e)=>
