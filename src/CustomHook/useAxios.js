@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios"
 
-export const useAxios = (url) => {
+export const useAxios = (url="https://airmeetbackend.herokuapp.com/data") => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -25,5 +25,5 @@ export const useAxios = (url) => {
         console.log(e)
     })
   }, [url]);
-  return { data, isLoading, isError };
+  return { data, isLoading, isError ,setData};
 };

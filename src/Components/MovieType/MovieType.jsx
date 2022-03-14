@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useAxios } from '../../CustomHook/useAxios'
 import Navbar from '../Navbar/Navbar'
@@ -20,10 +20,9 @@ const MovieType = () => {
           console.log(page);
         }
       };
-    const { data, isLoading, isError } = useAxios(
+    const { data, isLoading, isError} = useAxios(
         `https://airmeetbackend.herokuapp.com/data/filter/${obj.type}?_page=${page}&_limit=${limit}`,
       )
-    
      // console.log(data,"type")
   return (
     <div className={styles.background}>

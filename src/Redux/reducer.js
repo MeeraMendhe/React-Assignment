@@ -6,19 +6,19 @@ const initState={
 
 export const reducer=(state=initState,action)=>
 {
-    const {type,payload}=action
-
+    let {type,payload}=action
     switch(type){
         case ADD_TO_WISH:{
             return{
                 ...state,
-                wish:[...state.wish,payload]
+                wish:[...state.wish,payload],
+    
             }
         }
         case DELETE_FROM_WISH:{
             return{ 
                 ...state,
-                wish:state.wish.filter(e=>e._id!==payload)
+                wish:state.wish.filter(e=>e._id!==payload),
             }
         }
         default:

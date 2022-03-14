@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 const Movie = () => {
   const [page, setPage] = useState(1)
   const [query,setQuery]=useState("")
+  const [movie,setMovie]=useState([])
   const limit = 6
   const { data, isLoading, isError } = useAxios(
     `https://airmeetbackend.herokuapp.com/data?_page=${page}&_limit=${limit}`
