@@ -1,4 +1,4 @@
-# Airmeet Assignment
+# Assignment
 
 ## Problem Statement
 
